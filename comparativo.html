@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativo: DIV vs. SPAN</title>
+    <style>
+        body { font-family: sans-serif; }
+        .comparativo-container {
+            display: flex; /* Usamos flexbox para criar as duas colunas */
+            gap: 20px; /* Espaço entre as colunas */
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .coluna {
+            flex: 1; /* Faz com que cada coluna ocupe metade do espaço */
+            padding: 15px;
+            border: 1px dashed #ccc;
+        }
+        .coluna h3 { margin-top: 0; }
+        
+        /* Estilos para os elementos de bloco (DIV) */
+        .bloco-exemplo {
+            background-color: #cce5ff;
+            border: 1px solid #007bff;
+            padding: 10px;
+            margin-bottom: 10px; /* Adiciona margem para separá-los */
+        }
+
+        /* Estilos para os elementos em linha (SPAN) */
+        .linha-exemplo {
+            background-color: #ffdDC1;
+            border: 1px solid #ffc286;
+            padding: 5px;
+            margin-right: 5px; /* Adiciona margem para separá-los */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Prompt 6: Comparativo Lado a Lado</h1>
+
+    <div class="comparativo-container">
+        <div class="coluna">
+            <h3>Esquerda: <code>&lt;div&gt;</code> (display: block)</h3>
+            <div class="bloco-exemplo">Div 1</div>
+            <div class="bloco-exemplo">Div 2</div>
+            <div class="bloco-exemplo">Div 3</div>
+        </div>
+
+        <div class="coluna">
+            <h3>Direita: <code>&lt;span&gt;</code> (display: inline)</h3>
+            <span class="linha-exemplo">Span 1</span>
+            <span class="linha-exemplo">Span 2</span>
+            <span class="linha-exemplo">Span 3</span>
+            <span class="linha-exemplo">Span 4</span>
+        </div>
+    </div>
+
+    <h2>Legenda e Explicação</h2>
+    <p>
+        A diferença visual é clara e direta:
+    </p>
+    <ul>
+        <li><strong>Coluna da Esquerda (DIVs):</strong> Cada <code>&lt;div&gt;</code> é um elemento de <strong>bloco</strong>. Por padrão, ele sempre inicia em uma nova linha e ocupa toda a largura disponível, fazendo com que os elementos se empilhem verticalmente.</li>
+        <li><strong>Coluna da Direita (SPANs):</strong> Cada <code>&lt;span&gt;</code> é um elemento <strong>em linha</strong>. Ele não força uma quebra de linha e ocupa apenas o espaço necessário para seu conteúdo, permitindo que os elementos fiquem lado a lado na mesma linha.</li>
+    </ul>
+
+</body>
+</html>

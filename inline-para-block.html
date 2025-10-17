@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimento: Inline para Block</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            border: 2px dashed #ccc;
+            padding: 15px;
+        }
+        .exemplo-span {
+            background-color: #ffdDC1; /* Cor de fundo para SPANs normais */
+            border: 1px solid #ffc286;
+            padding: 5px;
+        }
+
+        /* --- A TRANSFORMAÇÃO --- */
+        .transformado-em-bloco {
+            display: block; /* Força o SPAN a se comportar como um DIV */
+            width: 200px;   /* Agora ele aceita largura */
+            height: 60px;  /* E também aceita altura */
+
+            /* Estilos extras para visualização */
+            background-color: #cce5ff;
+            border: 1px solid #007bff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Prompt 4: Transformando <code>&lt;span&gt;</code> em <code>display:block</code></h1>
+
+    <div class="container">
+        <p>
+            Texto inicial, aqui temos um 
+            <span class="exemplo-span">&lt;span&gt; inline</span> 
+            que flui normalmente com o texto. Agora, veja o próximo elemento, 
+            que também é um <code>&lt;span&gt;</code> no HTML:
+            <span class="transformado-em-bloco">Eu sou um SPAN!</span>
+            O texto continua depois do SPAN transformado, mas em uma nova linha.
+        </p>
+    </div>
+
+    <h2>Efeito Observado:</h2>
+    <p>
+        O <code>&lt;span&gt;</code> com a classe <code>.transformado-em-bloco</code>, que normalmente ficaria na mesma linha, agora se comporta como um <code>&lt;div&gt;</code>:
+    </p>
+    <ul>
+        <li><strong>Quebra de Linha:</strong> Ele força uma quebra de linha antes e depois de si mesmo.</li>
+        <li><strong>Aceita Dimensões:</strong> Passou a respeitar as propriedades <code>width: 200px</code> e <code>height: 60px</code>, algo que um <code>&lt;span&gt;</code> inline ignora.</li>
+        <li><strong>Ocupa seu Espaço:</strong> Ele se torna um "bloco" retangular no layout, empurrando o conteúdo seguinte para baixo.</li>
+    </ul>
+
+</body>
+</html>

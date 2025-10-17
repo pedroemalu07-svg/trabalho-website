@@ -1,0 +1,45 @@
+.card {
+  background: #e0f7fa;   /* Conteúdo - área interna com cor azul clara */
+  border: 3px solid #00796b; /* Borda - contorno visível escuro */
+  padding: 20px;          /* Espaço interno entre conteúdo e borda - cor verde clara via pseudo-elemento */
+  margin: 15px;           /* Espaço fora da borda - cor amarelo claro via contêiner externo */
+  position: relative;     /* Para usar pseudo-elementos */
+  width: 250px;
+}
+
+/* Usando pseudo-elemento para mostrar a área do padding com cor */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 3px; bottom: 3px; left: 3px; right: 3px; /* dentro da border */
+  background-color: rgba(76,175,80,0.2); /* verde claro translúcido */
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+/* Margin visível com fundo no contêiner dos cartões */
+.card-container {
+  background: #fff9c4;  /* amarelo bem claro para evidenciar margin dos cartões */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Ícone para visualização das camadas no texto */
+.icon {
+  background: #ffcdd2; /* vermelho claro para conteúdo do ícone */
+  border: 2px solid #c62828; /* borda vermelha */
+  padding: 5px; /* padding interno */
+  margin-right: 8px; /* margem direita */
+  border-radius: 4px;
+}
+
+.text {
+  background: #bbdefb; /* azul claro para conteúdo do texto */
+  border: 1px solid #0d47a1; /* borda azul escura */
+  padding: 2px 4px;
+  margin-left: 4px;
+  display: inline-block;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV vs. SPAN: Block vs. Inline</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Entendendo <code>&lt;div&gt;</code> (block) vs. <code>&lt;span&gt;</code> (inline)</h1>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h2>Cartão 1 (um &lt;div&gt;)</h2>
+                <p>
+                    Este parágrafo contém um 
+                    <span class="highlight-text">elemento &lt;span&gt;</span> 
+                    para dar destaque a uma palavra.
+                </p>
+                <p>
+                    Status: 
+                    <span class="status-icon active">✔</span> Ativo
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Cartão 2 (um &lt;div&gt;)</h2>
+                <p>
+                    Cada cartão é um <code>&lt;div&gt;</code>. Eles são naturalmente elementos de bloco, mas com
+                    <span class="highlight-text">CSS Flexbox</span>,
+                    eles podem ser organizados lado a lado.
+                </p>
+                 <p>
+                    Status: 
+                    <span class="status-icon inactive">✖</span> Inativo
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Cartão 3 (um &lt;div&gt;)</h2>
+                <p>
+                    O <code>&lt;span&gt;</code> é ideal para pequenas alterações, 
+                    como <span class="highlight-text">cor, fonte ou ícones</span>, 
+                    sem afetar o layout principal do bloco.
+                </p>
+                 <p>
+                    Status: 
+                    <span class="status-icon active">✔</span> Ativo
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

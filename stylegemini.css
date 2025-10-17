@@ -1,0 +1,87 @@
+/* ---- RESET BÁSICO E ESTILOS GLOBAIS ---- */ 
+
+/* Uma boa prática para garantir que padding e border não alterem a largura final do elemento */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Um cinza claro para o fundo */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #1c1e21;
+    margin-bottom: 40px;
+}
+
+/* Estiliza a tag <code> para parecer mais com código */
+code {
+    background-color: #e4e6eb;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* ---- LAYOUT DOS CARTÕES (USANDO DIV) ---- */
+
+/* O container que organiza os cartões. */
+.card-container {
+    display: flex; /* Ativa o Flexbox para alinhar os itens filhos (os cartões) */
+    justify-content: center; /* Centraliza os cartões no container */
+    flex-wrap: wrap; /* Permite que os cartões quebrem para a próxima linha em telas menores */
+    gap: 20px; /* Cria um espaço de 20px entre os cartões */
+    max-width: 1000px;
+}
+
+/* Estilo de cada cartão (o elemento <div>) */
+.card {
+    background-color: #ffffff; /* Fundo branco para os cartões */
+    border: 1px solid #dddfe2;
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+    
+    /* Define a largura base de cada cartão. Eles podem crescer se houver espaço. */
+    /* Isso demonstra a natureza de 'bloco': um contêiner com dimensões definidas. */
+    flex-basis: 280px;
+    flex-grow: 1; /* Permite que o cartão cresça se houver espaço extra */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #050505;
+}
+
+/* ---- ESTILOS DOS TEXTOS E ÍCONES (USANDO SPAN) ---- */
+
+/* Estilo para o texto destacado dentro do parágrafo */
+/* Como <span> é 'inline', aplicar este estilo não quebra a linha. */
+.highlight-text {
+    color: #007bff; /* Azul para destaque */
+    font-weight: bold;
+}
+
+/* Estilo base para o 'ícone' (um caractere de texto) */
+.status-icon {
+    font-weight: bold;
+    margin-right: 6px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo específico para o estado 'ativo' */
+.status-icon.active {
+    color: #28a745; /* Verde */
+}
+
+/* Estilo específico para o estado 'inativo' */
+.status-icon.inactive {
+    color: #dc3545; /* Vermelho */
+}

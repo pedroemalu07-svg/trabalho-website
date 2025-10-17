@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código com Bugs</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* ----- ÁREA DOS BUGS ----- */
+
+        /* BUG 1: Seletor errado */
+        /* A intenção era estilizar o <h2> dentro de .card-container, mas o seletor está quebrado. */
+        .card-container, h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        /* BUG 2: DIVs virando inline sem querer */
+        /* A intenção era que os cards ficassem um abaixo do outro (empilhados). */
+        .cards-wrapper {
+            display: flex; /* Flexbox por padrão usa a direção 'row' (linha) */
+            gap: 15px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #fafafa;
+            flex: 1;
+        }
+
+        /* BUG 3 e 4: Propriedades de bloco em elemento inline */
+        .status-tag {
+            background-color: #ffc107;
+            padding: 5px 10px;
+            border-radius: 4px;
+            
+            /* BUG 3: width não funciona em 'inline' */
+            width: 150px; 
+            text-align: center; /* Também não funciona bem sem ser um bloco */
+
+            /* BUG 4: margin-top não funciona em 'inline' */
+            margin-top: 20px; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card-container">
+            <h2>Lista de Tarefas</h2>
+            <p>Os cards abaixo deveriam estar empilhados verticalmente.</p>
+        </div>
+
+        <div class="cards-wrapper">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+        </div>
+        
+        <hr style="margin: 20px 0;">
+
+        <h3>Status da Entrega</h3>
+        <p>
+            O status deveria ser um bloco com margem acima: 
+            <span class="status-tag">Pendente</span>
+        </p>
+
+    </div>
+
+</body>
+</html>
