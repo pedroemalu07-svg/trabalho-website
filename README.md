@@ -23,3 +23,9 @@ O arquivo `correcoes.html` foi aberto no navegador e as correções foram valida
 - **Elemento `<span>`:** O LLM alterou o `<span>` para `display: block`, o que resolveu os problemas de `width` e `margin-top`, fazendo com que o elemento se comportasse como um bloco. A correção foi eficaz e bem comentada.
 
 O processo foi concluído com sucesso.
+ 
+papéis (quem fez o quê):passo 1 e 2-Pedro Henrique, passo 3 e 4-Lucas Simoes
+
+LLMs e versões:Gemini e Perplexity
+
+instruções para abrir os arquivos.-todos os codigos estarao na pasta meu-projeto-div-span e o  prompt-log.md e o comparativo-llms.md estao na pasta docstrabalho
